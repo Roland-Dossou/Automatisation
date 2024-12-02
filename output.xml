@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.10.3 on win32)" generated="20241128 14:18:20.080" rpa="false" schemaversion="4">
+<suite id="s1" name="Tests Selenium Easy" source="c:\Users\rdossou\AppData\Local\TESTFACTORY\workspace\Projet_Selenium_Easy_RBF\Tests_Selenium_Easy.robot">
+<test id="s1-t1" name="Selenium Menu Input Forms - Simple Form Demo - Two Input Fields" line="35">
+<kw name="Ouvrir SeleniumEasy" type="SETUP">
+<doc>Ouverture de Chrome à l'adresse https://www.qwant.com/</doc>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>http://127.0.0.1:8082/demo.seleniumeasy.com/basic-first-form-demo.html</arg>
+<arg>${BROWSER2}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20241128 14:18:20.301" level="INFO">Opening browser 'Firefox' to base url 'http://127.0.0.1:8082/demo.seleniumeasy.com/basic-first-form-demo.html'.</msg>
+<msg timestamp="20241128 14:18:20.307" level="INFO">Firefox driver log is always forced to to: C:\Users\rdossou\AppData\Local\TESTFACTORY\workspace\Projet_Selenium_Easy_RBF\geckodriver-7.log</msg>
+<status status="PASS" starttime="20241128 14:18:20.300" endtime="20241128 14:18:28.930"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20241128 14:18:28.930" endtime="20241128 14:18:29.203"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>5s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20241128 14:18:29.205" endtime="20241128 14:18:29.210"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.3s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20241128 14:18:29.210" endtime="20241128 14:18:29.211"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${popupIsPresent}</var>
+<arg>SeleniumLibrary.Wait Until Page Contains Element</arg>
+<arg>//a[@title="Close"]</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//a[@title="Close"]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<msg timestamp="20241128 14:18:35.207" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20241128 14:18:35.208" level="FAIL">Element '//a[@title="Close"]' did not appear in 5 seconds.</msg>
+<status status="FAIL" starttime="20241128 14:18:29.214" endtime="20241128 14:18:35.213"/>
+</kw>
+<msg timestamp="20241128 14:18:35.214" level="INFO">${popupIsPresent} = False</msg>
+<status status="PASS" starttime="20241128 14:18:29.213" endtime="20241128 14:18:35.214"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${popupIsPresent}</arg>
+<arg>SeleniumLibrary.Click Element</arg>
+<arg>//a[@title="Close"]</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20241128 14:18:35.214" endtime="20241128 14:18:35.215"/>
+</kw>
+<kw name="Get Title" library="SeleniumLibrary">
+<var>${title}</var>
+<doc>Returns the title of the current page.</doc>
+<msg timestamp="20241128 14:18:35.525" level="INFO">${title} = Selenium Easy Demo - Simple Form to Automate using Selenium</msg>
+<status status="PASS" starttime="20241128 14:18:35.216" endtime="20241128 14:18:35.525"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${title}</arg>
+<arg>Selenium Easy</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20241128 14:18:35.526" endtime="20241128 14:18:35.526"/>
+</kw>
+<status status="PASS" starttime="20241128 14:18:20.300" endtime="20241128 14:18:35.526"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${resultat_attentdu}</var>
+<arg>3</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20241128 14:18:35.528" level="INFO">${resultat_attentdu} = 3</msg>
+<status status="PASS" starttime="20241128 14:18:35.527" endtime="20241128 14:18:35.529"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@id="sum1"]</arg>
+<arg>1</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20241128 14:18:35.532" level="INFO">Typing text '1' into text field '//input[@id="sum1"]'.</msg>
+<status status="PASS" starttime="20241128 14:18:35.530" endtime="20241128 14:18:36.518"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@id="sum2"]</arg>
+<arg>2</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20241128 14:18:36.522" level="INFO">Typing text '2' into text field '//input[@id="sum2"]'.</msg>
+<status status="PASS" starttime="20241128 14:18:36.520" endtime="20241128 14:18:37.465"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//button[@onclick="return total()"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20241128 14:18:37.469" level="INFO">Clicking element '//button[@onclick="return total()"]'.</msg>
+<status status="PASS" starttime="20241128 14:18:37.467" endtime="20241128 14:18:38.329"/>
+</kw>
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>//span[@id="displayvalue"]</arg>
+<arg>${resultat_attentdu}</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" starttime="20241128 14:18:38.330" endtime="20241128 14:18:38.983"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${resultat_obtenu}</var>
+<arg>//span[@id="displayvalue"]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20241128 14:18:39.632" level="INFO">${resultat_obtenu} = 3</msg>
+<status status="PASS" starttime="20241128 14:18:38.986" endtime="20241128 14:18:39.632"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>//span[@id="displayvalue"]</arg>
+<arg>${resultat_attentdu}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20241128 14:18:39.637" level="INFO">Verifying element '//span[@id="displayvalue"]' contains exact text '3'.</msg>
+<status status="PASS" starttime="20241128 14:18:39.635" endtime="20241128 14:18:40.282"/>
+</kw>
+<kw name="Fermer SeleniumEasy" type="TEARDOWN">
+<doc>Fermeture du navigateur</doc>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20241128 14:18:43.290" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20241128 14:18:40.286" endtime="20241128 14:18:43.291"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20241128 14:18:43.291" endtime="20241128 14:18:44.824"/>
+</kw>
+<status status="PASS" starttime="20241128 14:18:40.284" endtime="20241128 14:18:44.825"/>
+</kw>
+<doc>...    
+Présentation Exercice
+http://127.0.0.1:8082/demo.seleniumeasy.com/basic-first-form-demo.html
+
+EXERCICE : Manipulation du formulaire
+
+Saisir le nombre 1
+
+Saisir le nombre 2
+
+Cliquer sur la somme
+
+Récupérer le résultat
+
+Vérifier le résultat</doc>
+<status status="PASS" starttime="20241128 14:18:20.299" endtime="20241128 14:18:44.826"/>
+</test>
+<status status="PASS" starttime="20241128 14:18:20.086" endtime="20241128 14:18:44.829"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Tests Selenium Easy">Tests Selenium Easy</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
